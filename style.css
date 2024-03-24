@@ -34,8 +34,9 @@
 } */
 
 body {
-  background: linear-gradient(180deg, #ff6d6d  0%,  #DE7373  77%);
+  /* background: linear-gradient(180deg, #ff6d6d  0%,  #DE7373  77%); */
   background-repeat: no-repeat;
+  background: var(--main-gray) !important;
 }
 
 /* body {
@@ -50,13 +51,64 @@ html {
   scroll-behavior: smooth;
 }
 
-                                      /***** Typography ******/
+
+/* gift section */
+
+.gift-section-wrapper {
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#giftSection {
+    /* display: none; */
+}
+
+#giftSection li {
+    color:#65BAA8;
+    font-size: 20px;
+}
+
+/* musiv playa */
+#music-player {
+    text-align: center;
+    margin-top: 50px;
+}
+
+#controls button {
+    background-color: #fff;
+    border: none;
+    color: #333;
+    font-size: 24px;
+    cursor: pointer;
+    margin: 0 10px;
+    transition: transform 0.2s;
+}
+
+#controls button:hover {
+    transform: scale(1.2);
+}
+
+#audio-player  {
+    opacity: 0;
+}
+
+/* spotify  */
+
+#spotify_frame {
+    border-radius: 12px;
+    height: 50vh;
+    position: relative;
+    top: 10vh;
+}
+
+/***** Typography ******/
 
 h1 {
   font-family: 'Montserrat', sans-serif;
-  font-weight: 700;
+  font-weight: 700 !important;
   letter-spacing: 1.4px;
-  font-size: 70px;
+  font-size: 70px !important;
   background: -webkit-linear-gradient(#DE7373, #F5F2B8);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -76,13 +128,15 @@ h2 {
   font-weight: 700;
   letter-spacing: 1.4px;
   font-size: 60px;
-  color: var(--main-white);
+  color: var(--main-white) !important;
   font-size: 34px;
   text-align: center;
   padding-top: 1vh;
   padding-left: 5%;
   padding-right: 5%;
   padding-bottom: 1vh;
+  position: relative;
+  bottom: 15vh;
 }
 
 h3 {
@@ -116,7 +170,7 @@ p {
     font-family: 'Montserrat', sans-serif;
     font-size: 1.6rem;
     line-height: 1.6;
-    color: var(--main-gray);
+    color: var(--main-light-green);
 }
 
                                     /**** SECTIONS *****/
@@ -178,7 +232,7 @@ p {
 
 @media (max-width: 46.50em) {
   .intro-section {
-    height: 200vh;
+    height: 100vh;
   }
 }
 
@@ -405,18 +459,17 @@ and (max-device-width: 480px) {
   }
 }
 
-                              /**** Contact Section ****/
+/**** Contact Section ****/
 
 .contact-section {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 100vh;
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background: url('background_synth_001.png');
+    background-size: cover;
 }
 
 .contact-section-header {
@@ -428,7 +481,7 @@ and (max-device-width: 480px) {
 
 @media (max-width: 46.50em) {
   .contact-section {
-    height: 200vh;
+    height: 100vh;
   }
 }
 
@@ -447,86 +500,6 @@ and (max-device-width: 480px) {
     height: 100vh;
   }
 }
-
-                                /**** XMR Section *****/
-
-.xmr-section {
-  display: flex;
-  flex-direction: column;
-  justify-content: left;
-  width: 100%;
-  height: 150vh;
-  background: var(--main-medium-gray);
-}
-
-.xmr-section > p {
-  font-family: 'Work Sans';
-  font-size: 1.6rem;
-  padding-left: 25%;
-  padding-right: 25%;
-  text-align: left;
-  color: var(--main-white);
-}
-
-.xmr-section-header > h1 {
-  text-align: center;
-  padding-top: 60px;
-  max-width: 640px;
-  margin: 0;
-  color: var(--main-white);
-}
-
-@media (max-width: 28.75em) {
-  .xmr-section-header {
-    font-size: 14px;
-  }
-  h2 {
-    font-size: 26px;
-  }
-  .xmr-section {
-    display: flex;
-    flex-direction: column;
-    justify-content: left;
-    width: 100%;
-    height: 250vh;
-    background: var(--main-medium-gray);
-  }
-}
-
-                             /**** OTHER CUSTOM STYLES */
-
-                             /**** Video Responsivity *****/
-
-	.videoWrapper {
-    position: relative;
-    padding-bottom: 56.25%; /* 16:9 */
-    height: 0;
-  }
-
-  .videoWrapper iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 70%;
-    border-style: none;
-  }
-	@media (max-width: 28.75em) {
-		.videoWrapper {
-      position: relative;
-      display: flex;
-      max-width: 100%;
-		}
-		.videoWrapper iframe {
-		position: absolute;
-    top: 0;
-    left: 0;
-    max-width: 100%;
-    height: 100%;
-		}
-	}
-
-                                /**** Button Styling *****/
 
  .butn-container {
   display: flex;
@@ -620,14 +593,6 @@ ul {
 }
 
 
-                            /****  Custom Navigation Rules ******/
-
-body h1 > span {
-  text-transform: none;
-  opacity: 0.5;
-  font-weight: 300;
-  font-size: 18px;
-}
 body input + label {
   position: fixed;
   top: 40px;
@@ -741,7 +706,7 @@ body, button, input {
 .screen {
   position: relative;
   background: var(--main-gray);
-  min-width: 75vw;
+  min-width: 80vw;
 }
 
 .screen:after {
