@@ -1,23 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link href="style.css" rel="stylesheet">
-<link href="footer.css" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,200;0,300;1,300&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link href="cards.css" rel="stylesheet">
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-<script src="https://kit.fontawesome.com/7aa7ff192f.js" crossorigin="anonymous"></script>
-<script src="https://code.iconify.design/2/2.2.1/iconify.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,200;0,300;1,300&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/7aa7ff192f.js" crossorigin="anonymous"></script>
+    <script src="https://code.iconify.design/2/2.2.1/iconify.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous">
+    </script>
+    <style>
+        body {
+            /* font-family: -apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji"; */
+            /* margin: 20px; */
+            /* background-color: #fff; */
+            text-align: left;
+        }
+        h1 {
+            color: rgb(31, 136, 61);
+        }
+        .music-list {
+            list-style: none;
+            padding: 0;
+            text-align: center;
+        }
+        .music-item {
+            margin-bottom: 10px;
+        }
+        .download-link {
+            background: transparent;
+            color: rgb(31, 136, 61) !important;
+            border-radius: 5px;
+            display: inline-block;
+            margin-left: auto;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+        }
+        svg {
+            margin-left: 5px;
+        }
+        .download-link:hover {
+            color: #fff;
+        }
+        .expand-icon {
+            cursor: pointer;
+            transition: transform 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: rgb(31, 136, 61) !important;
+            text-align: center;
+        }
+        .expanded {
+            transform: rotate(90deg);
+            opacity: 0.2;
+            position: relative;
+            bottom: 40%;
+        }
+        .expanded:hover {
+            color: rgb(31, 136, 61) !important;
+        }
+        .icon-only {
+            display: inline-block;
+            transition: transform 0.3s ease; /* Add a smooth transition for the transform property */
+        }
+        .expanded .icon-only {
+            transform: rotate(90deg); /* Rotate the icon when the section is expanded */
+        }
+        .thanks-message {
+            display: none;
+            margin-top: 20px;
+            background-color: #28a745;
+            color: #fff;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .words {
+            background: transparent;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+        }
+    </style>
 
 </head>
+
 <body>
 <!-- Navigation -->
 
@@ -27,181 +104,268 @@
     <span></span>
     <span></span>
 </label>
-       <nav>
-        <ul>
-          <li>
-            <a href="#project-section"><strong>Projects</strong></a>
-          </li>
-          <li>
-            <a href="#contact-section"><strong>Contact</strong></a>
-          </li>
-          <li>
-            <a href="#intro-section"><strong>About</strong></a>
-          </li>
-        </ul>
-      </nav>
-<div class="content">
-    <div class="container">
-        <div class="col-md-12">
-            <h1 class="">ALLAMM</h1> 
+<nav>
+    <ul>
+        <li>
+            <a href="#contact-section"><strong>Bookings</strong></a>
+        </li>
+        <li>
+            <a href="#intro-section"><strong>Artist info</strong></a>
+        </li>
+    </ul>
+</nav>
 
-            <!-- For gifts -->
-            <!-- <div class="thanks-message" id="thanksMessage">
-                downloading :)
-            </div> -->
-
-
+    <div class="content" style="height: 10vh;">
+        <div class="container">
+            <div class="col-md-12">
+                <h1 class="">ALLAMM</h1>
+            </div>
         </div>
     </div>
-</div>
-
-<!-- Contact Section -->
-
-<section id="contact-section" class="contact-section">
-    <div class="background">
-      <div class="container">
-        <div class="screen">
-          <div class="screen-header">
-            <div class="screen-header-left">
-              <div class="screen-header-button close"></div>
-              <div class="screen-header-button maximize"></div>
-              <div class="screen-header-button minimize"></div>
-            </div>
-            <div class="screen-header-right">
-              <div class="screen-header-ellipsis"></div>
-              <div class="screen-header-ellipsis"></div>
-              <div class="screen-header-ellipsis"></div>
-            </div>
-          </div>
-          <div class="screen-body">
-            <div class="screen-body-item left">
-            </div>
-            <div class="screen-body-item">
-              <div class="app-form">
-                <div class="app-form-group">
-                  <form name="contactMe" id="form" class="topBefore" method="POST" data-netlify="true">
-                  <input class="app-form-control" aria-labelledby="name" name="name" id="name" type="text" placeholder="NAME" value="Name">
-                </div>
-                <div class="app-form-group">
-                  <input class="app-form-control" aria-labelledby="email" name="email" id="email" type="text" placeholder="EMAIL">
-                </div>
-                <div class="app-form-group message">
-                  <input class="app-form-control" aria-labelledby="message" name="message" id="message" type="text" placeholder="MESSAGE">
-                </div>
-                <div class="app-form-group buttons">
-                  <button class="app-form-button" type="submit">SEND</button>
-                </div>
-                </form>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-</section>
     
-<!-- About Section -->
-<section id="intro-section" class="intro-section">   
-    <div class="col-sm-10 float-center text-left p80">
-        <p>
-            About: Allamm is a web developer, digital archivist, and musician from Glasgow, Scotland, and has worked on countless sites in the digital giving sector including customisations for Alzheimers Research, G.O.S.H, Mental Health UK, Irish Cancer Society and many more. Once a 'scholar', Allamm has an MA in digital media and information studies and a MSc in mobile web development. Before this project, Allamm has contributed music for video art installations, developed archives for arts organisations, and played guitar in a rock band.
+    <section class="section gift-section-wrapper">
+        <div class="container">
+            <div class="col-sm-12 p80 mt40">
+                
+                <!-- <h4 class="expand-icon mt20" onclick="togglegiftSection()">
+                    <br>Free music<span class="icon-only"> ▶️</span>
+                </h4> -->
+                
+                <ul class="music-list" id="giftSection">
+                    <li class="music-item">
+                        <strong class="words">LEISURE CENTRE</strong>
+                        <a class="download-link" href="https://github.com/Al-1-0/ALLAMM/raw/main/Leisure%20Centre.mp3" download><svg aria-hidden="true" focusable="false" role="img" class="octicon octicon-download" viewBox="0 0 16 16" width="16" height="16" fill="currentColor" style="display:inline-block;user-select:none;vertical-align:text-bottom;overflow:visible"><path d="M2.75 14A1.75 1.75 0 0 1 1 12.25v-2.5a.75.75 0 0 1 1.5 0v2.5c0 .138.112.25.25.25h10.5a.25.25 0 0 0 .25-.25v-2.5a.75.75 0 0 1 1.5 0v2.5A1.75 1.75 0 0 1 13.25 14Z"></path><path d="M7.25 7.689V2a.75.75 0 0 1 1.5 0v5.689l1.97-1.969a.749.749 0 1 1 1.06 1.06l-3.25 3.25a.749.749 0 0 1-1.06 0L4.22 6.78a.749.749 0 1 1 1.06-1.06l1.97 1.969Z"></path></svg></a>
+                    </li>
+                    <li class="music-item">
+                        <strong class="words">MAYA</strong>
+                        <a class="download-link" href="https://github.com/Al-1-0/ALLAMM/raw/main/Maya.mp3" download><svg aria-hidden="true" focusable="false" role="img" class="octicon octicon-download" viewBox="0 0 16 16" width="16" height="16" fill="currentColor" style="display:inline-block;user-select:none;vertical-align:text-bottom;overflow:visible"><path d="M2.75 14A1.75 1.75 0 0 1 1 12.25v-2.5a.75.75 0 0 1 1.5 0v2.5c0 .138.112.25.25.25h10.5a.25.25 0 0 0 .25-.25v-2.5a.75.75 0 0 1 1.5 0v2.5A1.75 1.75 0 0 1 13.25 14Z"></path><path d="M7.25 7.689V2a.75.75 0 0 1 1.5 0v5.689l1.97-1.969a.749.749 0 1 1 1.06 1.06l-3.25 3.25a.749.749 0 0 1-1.06 0L4.22 6.78a.749.749 0 1 1 1.06-1.06l1.97 1.969Z"></path></svg></a>
+                    </li>
+                    <!-- Add more items as needed -->
+    
+                    <div class="thanks-message" id="thanksMessage">
+                        downloading :)
+                    </div>
+                </ul>
+    
+                <!-- links to spotify / apple music -->
+                <iframe id="spotify_frame" style="border-radius:12px" 
+                src="https://open.spotify.com/embed/artist/5pyS6EsqVKAaSmrkt5lefF?utm_source=generator" 
+                width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                <!-- Contact Section -->
+                 <!-- music player -->
+                 <div id="music-player" style="display: none;;">
+                    <audio id="audio-player" controls>
+                        <source src="https://github.com/Al-1-0/ALLAMM/raw/main/Leisure%20Centre.mp3" type="audio/mpeg">
+                        Your browser does not support the audio element.
+                    </audio>
+                    
+                    <div id="controls">
+                        <button id="play-btn">&#9658;</button>
+                        <button id="pause-btn">&#10074;&#10074;</button>
+                        <button id="stop-btn">&#9724;</button>
+                    </div>
+                </div>
+                <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    
+                <!-- links to spotify / apple music -->
+            </div>
+        </div>
+    </section>
 
-            As a musician (electronic, techno, experimental, rock), Allamm's music comprises of synthy, deep and expressive techno compositions aimed to surprise and present the listener with personal experiences.  
 
-            Next release 'Altruistica' is out on April 19th 2024.
-        </p>
-    </div>
-</section>
 
-        
 
-<script>
-    // JavaScript to show thanks message
-    var downloadLinks = document.querySelectorAll('.download-link');
 
-    downloadLinks.forEach(function(link) {
-        link.addEventListener('click', function() {
-            showThanksMessage();
+    <section id="contact-section" class="contact-section">
+        <h2 class="text-center">BOOKING / ENQUIRIES</h2>
+        <div class="background">
+            <div class="container">
+                <div class="screen">
+                    <div class="screen-header">
+                        <div class="screen-header-left">
+                            <div class="screen-header-button close"></div>
+                            <div class="screen-header-button maximize"></div>
+                            <div class="screen-header-button minimize"></div>
+                        </div>
+                        <div class="screen-header-right">
+                            <div class="screen-header-ellipsis"></div>
+                            <div class="screen-header-ellipsis"></div>
+                            <div class="screen-header-ellipsis"></div>
+                        </div>
+                    </div>
+                    <div class="screen-body">
+                        <div class="screen-body-item left">
+                        </div>
+                        <div class="screen-body-item">
+                            <div class="app-form">
+                                <div class="app-form-group">
+                                    <form name="contactMe" id="form" class="topBefore" method="POST"
+                                        data-netlify="true">
+                                        <input class="app-form-control" aria-labelledby="name" name="name" id="name"
+                                            type="text" placeholder="NAME" value="Name">
+                                </div>
+                                <div class="app-form-group">
+                                    <input class="app-form-control" aria-labelledby="email" name="email" id="email"
+                                        type="text" placeholder="EMAIL">
+                                </div>
+                                <div class="app-form-group message">
+                                    <input class="app-form-control" aria-labelledby="message" name="message"
+                                        id="message" type="text" placeholder="MESSAGE">
+                                </div>
+                                <div class="app-form-group buttons">
+                                    <button class="app-form-button" type="submit">SEND</button>
+                                </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="intro-section" class="intro-section">
+        <div class="col-sm-10 float-center text-left p80">
+            <p>
+                About: Allamm is a web developer, digital archivist, and musician from Glasgow, Scotland, and has worked
+                on countless sites in the digital giving sector including customisations for Alzheimers Research,
+                G.O.S.H, Mental Health UK, Irish Cancer Society and many more. Once a 'scholar', Allamm has an MA in
+                digital media and information studies and a MSc in mobile web development. Before this project, Allamm
+                has contributed music for video art installations, developed archives for arts organisations, and played
+                guitar in a rock band.
+
+                As a musician (electronic, techno, experimental, rock), Allamm's music comprises of synthy, deep and
+                expressive techno compositions aimed to surprise and present the listener with personal experiences.
+
+                Next release 'Altruistica' is out on April 19th 2024.
+            </p>
+        </div>
+    </section>
+
+
+
+    <script>
+        // JavaScript to show thanks message
+        var downloadLinks = document.querySelectorAll('.download-link');
+
+        downloadLinks.forEach(function (link) {
+            link.addEventListener('click', function () {
+                showThanksMessage();
+            });
         });
-    });
 
-    function showThanksMessage() {
-        var thanksMessage = document.getElementById('thanksMessage');
-        thanksMessage.style.display = 'block';
+        function showThanksMessage() {
+            var thanksMessage = document.getElementById('thanksMessage');
+            thanksMessage.style.display = 'block';
 
-        // You can customize the duration the message is displayed
-        setTimeout(function() {
-            thanksMessage.style.display = 'none';
-        }, 3000); // 3000 milliseconds (3 seconds) in this example
-    }
-
-    function toggleAboutSection() {
-        var aboutSection = document.getElementById('aboutSection');
-        var expandIcon = document.querySelector('.expand-icon');
-
-        if (aboutSection.style.display === 'none' || aboutSection.style.opacity === '0') {
-            aboutSection.style.display = 'block';
+            // You can customize the duration the message is displayed
             setTimeout(function () {
-                aboutSection.style.opacity = '1';
-            }, 10);
-            expandIcon.classList.add('expanded');
-        } else {
-            aboutSection.style.opacity = '0';
-            setTimeout(function () {
-                aboutSection.style.display = 'none';
-            }, 300); // Adjust this duration to match the transition duration
-            expandIcon.classList.remove('expanded');
+                thanksMessage.style.display = 'none';
+            }, 3000); // 3000 milliseconds (3 seconds) in this example
         }
-    }
-</script>
-<!-- Footer Section-->
 
-<footer class="footer-container col-md-12 float-center text-center">
-    <div class="footer-links">
-      <div class="footer-link-wrapper">
-          <div class="footer-link-items">
-        <a href="https://poly.work/al_webdev_001" target="_blank" aria-label="click to visit the Polywork page"><span class="iconify" data-icon="simple-icons:polywork"></span></a>
-            <a href="https://github.com/Al-1-0/Al-1-0-site" target="_blank" aria-label="click to visit the Github page"><i class="fa fa-github"></i></a>
-            <a href="https://www.linkedin.com/in/al-m-303774164/" target="_blank" aria-label="click to visit the LinkedIn page"><i class="fa fa-linkedin"></i></a><br>
-          </div>
-      </div>
-    </div>
-    <p class="website-rights" style="text-align:center;">AL-1-0 © 2022<br><br>
-      Current time: <span id="time"></span></p>
-            <script type="text/javascript">
-                function getTime() {
-                    var date = new Date();
-                    var hours = date.getHours();
-                    var minutes = date.getMinutes();
-                    var seconds = date.getSeconds();
-                    var newformat = hours >= 12 ? "pm" : "am";
-                    hours = hours % 12;
-                    hours = hours ? hours : 12;
-                    minutes = minutes < 10 ? "0" + minutes : minutes;
-                    seconds = seconds < 10 ? "0" + seconds : seconds;
-                    document.getElementById("time").innerHTML =
-                        hours + ":" + minutes + ":" + seconds + " " + newformat;
-                }
+        function togglegiftSection() {
+            var giftSection = document.getElementById('giftSection');
+            var expandIcon = document.querySelector('.expand-icon');
+
+            if (giftSection.style.display === 'none' || giftSection.style.opacity === '0') {
+                giftSection.style.display = 'block';
+                setTimeout(function () {
+                    giftSection.style.opacity = '1';
+                }, 10);
+                expandIcon.classList.add('expanded');
+            } else {
+                giftSection.style.opacity = '0';
+                setTimeout(function () {
+                    giftSection.style.display = 'none';
+                }, 300); // Adjust this duration to match the transition duration
+                expandIcon.classList.remove('expanded');
+            }
+        }
+    </script>
+    <!-- Footer Section-->
+
+    <footer class="footer-container col-md-12 float-center text-center">
+        <div class="footer-links" style="display: none;">
+            <div class="footer-link-wrapper">
+                <div class="footer-link-items">
+                    <a href="https://poly.work/al_webdev_001" target="_blank"
+                        aria-label="click to visit the Polywork page"><span class="iconify"
+                            data-icon="simple-icons:polywork"></span></a>
+                    <a href="https://github.com/Al-1-0/Al-1-0-site" target="_blank"
+                        aria-label="click to visit the Github page"><i class="fa fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/al-m-303774164/" target="_blank"
+                        aria-label="click to visit the LinkedIn page"><i class="fa fa-linkedin"></i></a><br>
+                </div>
+            </div>
+        </div>
+        <p class="website-rights" style="text-align:center;">AL-1-0 © 2022<br><br>
+            Current time: <span id="time"></span></p>
+        <script type="text/javascript">
+            function getTime() {
+                var date = new Date();
+                var hours = date.getHours();
+                var minutes = date.getMinutes();
+                var seconds = date.getSeconds();
+                var newformat = hours >= 12 ? "pm" : "am";
+                hours = hours % 12;
+                hours = hours ? hours : 12;
+                minutes = minutes < 10 ? "0" + minutes : minutes;
+                seconds = seconds < 10 ? "0" + seconds : seconds;
+                document.getElementById("time").innerHTML =
+                    hours + ":" + minutes + ":" + seconds + " " + newformat;
+            }
+            getTime();
+
+            window.setInterval(function () {
                 getTime();
-  
-                window.setInterval(function () {
-                    getTime();
-                }, 1000);
-            </script>
-    </p>
-  </footer>
-  
-  <!-- Navbar Syntax -->
-  
-  <script>
-    function myFunction() {
-      var x = document.getElementById("myTopnav");
-      if (x.className === "topnav") {
-        x.className += "responsive";
-      } else {
-        x.className =  "topnav";
-      }
-    }
-  </script>
+            }, 1000);
+        </script>
+        </p>
+    </footer>
+
+    <script>
+        $(document).ready(function() {
+            var audioPlayer = document.getElementById("audio-player");
+            var trackNameElement = document.getElementById("track-name");
+
+            // Update track name when the audio source changes
+            audioPlayer.addEventListener('loadedmetadata', function() {
+                var trackName = audioPlayer.src.split('/').pop(); // Extract the track name from the URL
+                trackNameElement.textContent = trackName;
+            });
+
+            $("#play-btn").click(function() {
+                audioPlayer.play();
+            });
+
+            $("#pause-btn").click(function() {
+                audioPlayer.pause();
+            });
+
+            $("#stop-btn").click(function() {
+                audioPlayer.pause();
+                audioPlayer.currentTime = 0;
+            });
+        });
+
+
+
+    </script>
+
+    <!-- Navbar Syntax -->
+
+    <script>
+        function myFunction() {
+            var x = document.getElementById("myTopnav");
+            if (x.className === "topnav") {
+                x.className += "responsive";
+            } else {
+                x.className = "topnav";
+            }
+        }
+    </script>
 </body>
+
 </html>
