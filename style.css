@@ -571,6 +571,38 @@ body, button, input {
 
 @media screen and (max-width: 520px) {
 
+body {
+    width: 100vw;
+}
+
+p {
+    width: 90vw;
+    position: relative;
+    top: 40px;
+    margin-bottom: 100px !important;
+    background: var(--main-gray);
+}
+
+#spotify_frame {
+    width: 100vw;
+}
+
+.gift-section-wrapper,
+.music-section-wrapper {
+    height: 50vh;
+}
+.form-section {
+    height: 50vh;
+}
+.gift-section-wrapper img,
+.contact-section img,
+.form-section img,
+.music-section-wrapper img {
+    width: 100vw;
+}
+.intro-section img {
+    display: none;
+}
   .screen {
     min-width: 75vw;
   }
