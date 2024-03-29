@@ -197,7 +197,8 @@ p {
     display: none;
   }
 
-  .form-container {
+  .form-container,  
+  .downloads-container {
     position: relative;
     top: -40vh;;
     left: -140vw; /* Initially hide the form outside the viewport */
@@ -704,7 +705,9 @@ p {
     width: 100vw;
     height: 100vh;
 }
-.contact-section .form-container {
+.contact-section .form-container,
+#giftSection .downloads-container 
+ {
     left: 0;;
     width: 100vw;
 }
