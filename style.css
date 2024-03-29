@@ -91,6 +91,7 @@ html {
     margin: 0 auto;
     z-index: 2;
     top: 30px;
+    height: 80vh;
 }
 
 /***** Typography ******/
