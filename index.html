@@ -20,7 +20,11 @@
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous">
     </script>
+    <!-- BRICK -->
+    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.js"></script>
+    <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.js"></script>
     <style>
+
         body {
             /* font-family: -apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji"; */
             /* margin: 20px; */
@@ -30,29 +34,7 @@
         h1 {
             color: rgb(31, 136, 61);
         }
-        .music-list {
-            list-style: none;
-            padding: 0;
-            text-align: center;
-        }
-        .music-item {
-            margin-bottom: 10px;
-        }
-        .download-link {
-            background: transparent;
-            color: rgb(31, 136, 61) !important;
-            border-radius: 5px;
-            display: inline-block;
-            margin-left: auto;
-            font-family: 'Montserrat', sans-serif;
-            font-weight: 700;
-        }
-        svg {
-            margin-left: 5px;
-        }
-        .download-link:hover {
-            color: #fff;
-        }
+        
         .expand-icon {
             cursor: pointer;
             transition: transform 0.3s ease;
@@ -107,7 +89,7 @@
 <nav>
     <ul>
         <li>
-            <a href="#contact-section"><strong>Bookings</strong></a>
+            <a href="#contact-section"><strong>Book</strong></a>
         </li>
         <li>
             <a href="#intro-section"><strong>Info</strong></a>
@@ -115,11 +97,14 @@
         <li>
             <a href="#musicSection"><strong>Music</strong></a>
         </li>
+        <li>
+            <a href="#giftSection"><strong>Gifts</strong></a>
+        </li>
     </ul>
 </nav>
 
     
-    <section class="section gift-section-wrapper">
+    <section class="section gift-section-wrapper ">
         <img src="header.png"/>
                 <h2 class="text-center">ARTIST: ALLAMM</h2>
 
@@ -142,105 +127,179 @@
     </section>
 
 
-    <section id="contact-section" class="contact-section">
-        <h2 class="text-center">BOOKING / ENQUIRIES</h2>
-        <img src="background_synth_001.png" alt="Background Image">
-    </section>
-
-
-    <section id="form-section" class="form-section">
-        <div class="background">
-            <div class="container">
-                <div class="screen">
-                    <div class="screen-header">
-                        <div class="screen-header-left">
-                            <div class="screen-header-button close"></div>
-                            <div class="screen-header-button maximize"></div>
-                            <div class="screen-header-button minimize"></div>
+    <section id="contact-section" class="contact-section ">
+        
+        <div class="spin-card">
+            <h2 class="text-center">BOOKING / ENQUIRIES</h2>
+            <div class="front">
+                <img src="background_synth_001.png" alt="Background Image" class="clickable-image">
+            </div>
+            
+            <div class="back">
+                
+            </div>
+        </div>
+        <div class="form-container">
+            <div class="background" >
+                <div class="container">
+                    <div class="screen">
+                        <div class="screen-header">
+                            <div class="screen-header-left">
+                                <div class="screen-header-button close"></div>
+                                <div class="screen-header-button maximize"></div>
+                                <div class="screen-header-button minimize"></div>
+                            </div>
+                            <div class="screen-header-right">
+                                <div class="screen-header-ellipsis"></div>
+                                <div class="screen-header-ellipsis"></div>
+                                <div class="screen-header-ellipsis"></div>
+                            </div>
                         </div>
-                        <div class="screen-header-right">
-                            <div class="screen-header-ellipsis"></div>
-                            <div class="screen-header-ellipsis"></div>
-                            <div class="screen-header-ellipsis"></div>
-                        </div>
-                    </div>
-                    <div class="screen-body">
-                        <div class="screen-body-item left">
-                        </div>
-                        <div class="screen-body-item">
-                            <div class="app-form">
-                                <div class="app-form-group">
-                                    <form name="contactMe" id="form" class="topBefore" method="POST"
-                                        data-netlify="true">
-                                        <input class="app-form-control" aria-labelledby="name" name="name" id="name"
-                                            type="text" placeholder="NAME" value="Name">
+                        <div class="screen-body">
+                            <div class="screen-body-item left">
+                            </div>
+                            <div class="screen-body-item">
+                                <div class="app-form">
+                                    <div class="app-form-group">
+                                        <form name="contactMe" id="form" class="topBefore" method="POST"
+                                            data-netlify="true">
+                                            <input class="app-form-control" aria-labelledby="name" name="name" id="name"
+                                                type="text" placeholder="NAME" value="Name">
+                                    </div>
+                                    <div class="app-form-group">
+                                        <input class="app-form-control" aria-labelledby="email" name="email" id="email"
+                                            type="text" placeholder="EMAIL">
+                                    </div>
+                                    <div class="app-form-group message">
+                                        <input class="app-form-control" aria-labelledby="message" name="message"
+                                            id="message" type="text" placeholder="MESSAGE">
+                                    </div>
+                                    <div class="app-form-group buttons">
+                                        <button class="app-form-button" type="submit">SEND</button>
+                                    </div>
+                                    </form>
                                 </div>
-                                <div class="app-form-group">
-                                    <input class="app-form-control" aria-labelledby="email" name="email" id="email"
-                                        type="text" placeholder="EMAIL">
-                                </div>
-                                <div class="app-form-group message">
-                                    <input class="app-form-control" aria-labelledby="message" name="message"
-                                        id="message" type="text" placeholder="MESSAGE">
-                                </div>
-                                <div class="app-form-group buttons">
-                                    <button class="app-form-button" type="submit">SEND</button>
-                                </div>
-                                </form>
                             </div>
                         </div>
                     </div>
                 </div>
+                
             </div>
-            
         </div>
+        <script>
+            $(document).ready(function() {
+                $('#contact-section .clickable-image').click(function() {
+                    var card = $(this).closest('#contact-section .spin-card');
+                    card.toggleClass('flipped');
+                    card.find('#contact-section .back').toggleClass('visible');
+                    $('#contact-section .form-container').toggleClass('form-open');
+                });
+            });
+        </script>
         
     </section>
 
+
     <!-- About Section -->
-    <section id="intro-section" class="intro-section" style="">
-            <img src="EP_0001 INNER 2.png" />
+    <section id="intro-section" class="intro-section " style="">
+        <div class="spin-card">
             <h2 class="text-center">ARTIST INFO</h2>
-            <p>
-                About: Allamm is a web developer, digital archivist, and musician from Glasgow, Scotland, and has worked
-                on countless sites in the digital giving sector including customisations for Alzheimers Research,
-                G.O.S.H, Mental Health UK, Irish Cancer Society and many more. Once a 'scholar', Allamm has an MA in
-                digital media and information studies and a MSc in mobile web development. Before this project, Allamm
-                has contributed music for video art installations, developed archives for arts organisations, and played
-                guitar in a rock band.
+            <div class="front">
+                <img src="EP_0001 INNER 2.png" class="clickable-image"/>
+            </div>
+            <div class="back">
+                <p>
+                    About: Allamm is a web developer, digital archivist, and musician from Glasgow, Scotland, and has worked
+                    on countless sites in the digital giving sector including customisations for Alzheimers Research,
+                    G.O.S.H, Mental Health UK, Irish Cancer Society and many more. Once a 'scholar', Allamm has an MA in
+                    digital media and information studies and a MSc in mobile web development. Before this project, Allamm
+                    has contributed music for video art installations, developed archives for arts organisations, and played
+                    guitar in a rock band.
+    
+                    As a musician (electronic, techno, experimental, rock), Allamm's music comprises of synthy, deep and
+                    expressive techno compositions aimed to surprise and present the listener with personal experiences.
+    
+                    Next release 'Altruistica' is out on April 19th 2024.
+                </p>
+            </div>
+        </div>  
+        
+        <script>
+            $(document).ready(function() {
+                $('#intro-section .clickable-image').click(function() {
+                    var card = $(this).closest('#intro-section .spin-card');
+                    card.toggleClass('flipped');
+                    card.find('#intro-section .back').toggleClass('visible');
+                });
+            });
+        </script>
 
-                As a musician (electronic, techno, experimental, rock), Allamm's music comprises of synthy, deep and
-                expressive techno compositions aimed to surprise and present the listener with personal experiences.
-
-                Next release 'Altruistica' is out on April 19th 2024.
-            </p>
     </section>
-
 
     <!-- music -->
 
-    <section class="music-section-wrapper" id="musicSection">
-        <img src="2.png"/>
+    <section class="music-section-wrapper " id="musicSection">
+        <div class="spin-card">
             <h2>MUSIC</h2>
-            <!-- links to spotify / apple music -->
-            <iframe id="spotify_frame" style="border-radius:12px" 
-            src="https://open.spotify.com/embed/artist/5pyS6EsqVKAaSmrkt5lefF?utm_source=generator" 
-            frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-            <ul class="music-list" id="giftSection">
-                <li class="music-item">
-                    <strong class="words">LEISURE CENTRE</strong>
-                    <a class="download-link" href="https://github.com/Al-1-0/ALLAMM/raw/main/Leisure%20Centre.mp3" download><svg aria-hidden="true" focusable="false" role="img" class="octicon octicon-download" viewBox="0 0 16 16" width="16" height="16" fill="currentColor" style="display:inline-block;user-select:none;vertical-align:text-bottom;overflow:visible"><path d="M2.75 14A1.75 1.75 0 0 1 1 12.25v-2.5a.75.75 0 0 1 1.5 0v2.5c0 .138.112.25.25.25h10.5a.25.25 0 0 0 .25-.25v-2.5a.75.75 0 0 1 1.5 0v2.5A1.75 1.75 0 0 1 13.25 14Z"></path><path d="M7.25 7.689V2a.75.75 0 0 1 1.5 0v5.689l1.97-1.969a.749.749 0 1 1 1.06 1.06l-3.25 3.25a.749.749 0 0 1-1.06 0L4.22 6.78a.749.749 0 1 1 1.06-1.06l1.97 1.969Z"></path></svg></a>
-                </li>
-                <li class="music-item">
-                    <strong class="words">MAYA</strong>
-                    <a class="download-link" href="https://github.com/Al-1-0/ALLAMM/raw/main/Maya.mp3" download><svg aria-hidden="true" focusable="false" role="img" class="octicon octicon-download" viewBox="0 0 16 16" width="16" height="16" fill="currentColor" style="display:inline-block;user-select:none;vertical-align:text-bottom;overflow:visible"><path d="M2.75 14A1.75 1.75 0 0 1 1 12.25v-2.5a.75.75 0 0 1 1.5 0v2.5c0 .138.112.25.25.25h10.5a.25.25 0 0 0 .25-.25v-2.5a.75.75 0 0 1 1.5 0v2.5A1.75 1.75 0 0 1 13.25 14Z"></path><path d="M7.25 7.689V2a.75.75 0 0 1 1.5 0v5.689l1.97-1.969a.749.749 0 1 1 1.06 1.06l-3.25 3.25a.749.749 0 0 1-1.06 0L4.22 6.78a.749.749 0 1 1 1.06-1.06l1.97 1.969Z"></path></svg></a>
-                </li>
-                <!-- Add more items as needed -->
+            <div class="front">
+                <img src="2.png" class="clickable-image"/>
+            </div>
+            <div class="back">
+                <!-- links to spotify / apple music -->
+                <iframe id="spotify_frame" 
+                        style="border-radius:12px" 
+                        src="https://open.spotify.com/embed/artist/5pyS6EsqVKAaSmrkt5lefF?utm_source=generator" 
+                        frameBorder="0" 
+                        allowfullscreen="" 
+                        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+                        loading="lazy">
+                </iframe>
+            </div>
+        </div>
+        <script>
+            $(document).ready(function() {
+                $('#musicSection .clickable-image').click(function() {
+                    var card = $(this).closest('#musicSection .spin-card');
+                    card.toggleClass('flipped');
+                    card.find('#musicSection .back').toggleClass('visible');
+                });
+            });
+        </script>
+            
+    </section>
 
+    <section id="giftSection" class="">
+        <div class="spin-card">
+            <h2>DOWNLOADS</h2>
+            <div class="front">
+                <img src="EP_0001a INNER 1.png" class="clickable-image"/>
+            </div>
+            <div class="back">
+                <p>
+                    <span>
+                        LEISURE CENTRE <a class="download-link" href="https://github.com/Al-1-0/ALLAMM/raw/main/Leisure%20Centre.mp3" download><svg aria-hidden="true" focusable="false" role="img" class="octicon octicon-download" viewBox="0 0 16 16" width="16" height="16" fill="currentColor" style="display:inline-block;user-select:none;vertical-align:text-bottom;overflow:visible"><path d="M2.75 14A1.75 1.75 0 0 1 1 12.25v-2.5a.75.75 0 0 1 1.5 0v2.5c0 .138.112.25.25.25h10.5a.25.25 0 0 0 .25-.25v-2.5a.75.75 0 0 1 1.5 0v2.5A1.75 1.75 0 0 1 13.25 14Z"></path><path d="M7.25 7.689V2a.75.75 0 0 1 1.5 0v5.689l1.97-1.969a.749.749 0 1 1 1.06 1.06l-3.25 3.25a.749.749 0 0 1-1.06 0L4.22 6.78a.749.749 0 1 1 1.06-1.06l1.97 1.969Z"></path></svg></a>
+                    </span>
+                    <br>
+                    <span>
+                        MAYA<a class="download-link" href="https://github.com/Al-1-0/ALLAMM/raw/main/Maya.mp3" download><svg aria-hidden="true" focusable="false" role="img" class="octicon octicon-download" viewBox="0 0 16 16" width="16" height="16" fill="currentColor" style="display:inline-block;user-select:none;vertical-align:text-bottom;overflow:visible"><path d="M2.75 14A1.75 1.75 0 0 1 1 12.25v-2.5a.75.75 0 0 1 1.5 0v2.5c0 .138.112.25.25.25h10.5a.25.25 0 0 0 .25-.25v-2.5a.75.75 0 0 1 1.5 0v2.5A1.75 1.75 0 0 1 13.25 14Z"></path><path d="M7.25 7.689V2a.75.75 0 0 1 1.5 0v5.689l1.97-1.969a.749.749 0 1 1 1.06 1.06l-3.25 3.25a.749.749 0 0 1-1.06 0L4.22 6.78a.749.749 0 1 1 1.06-1.06l1.97 1.969Z"></path></svg></a>
+                    </span>
+                </p>
+    
                 <div class="thanks-message" id="thanksMessage">
                     downloading :)
                 </div>
-            </ul>
+            </div>
+        </div>
+        <script>
+            $(document).ready(function() {
+                $('#giftSection .clickable-image').click(function() {
+                    var card = $(this).closest('#giftSection .spin-card');
+                    card.toggleClass('flipped');
+                    card.find('#giftSection .back').toggleClass('visible');
+                });
+            });
+        </script>
+        
     </section>
 
     <script>
@@ -323,34 +382,7 @@
         </p>
     </footer>
 
-    <script>
-        $(document).ready(function() {
-            var audioPlayer = document.getElementById("audio-player");
-            var trackNameElement = document.getElementById("track-name");
 
-            // Update track name when the audio source changes
-            audioPlayer.addEventListener('loadedmetadata', function() {
-                var trackName = audioPlayer.src.split('/').pop(); // Extract the track name from the URL
-                trackNameElement.textContent = trackName;
-            });
-
-            $("#play-btn").click(function() {
-                audioPlayer.play();
-            });
-
-            $("#pause-btn").click(function() {
-                audioPlayer.pause();
-            });
-
-            $("#stop-btn").click(function() {
-                audioPlayer.pause();
-                audioPlayer.currentTime = 0;
-            });
-        });
-
-
-
-    </script>
 
     <!-- Navbar Syntax -->
 
@@ -364,6 +396,9 @@
             }
         }
     </script>
-</body>
+
+
+
+
 
 </html>
