@@ -747,7 +747,7 @@ p {
     height: 100%;
     background-color: transparent;
     transition: left 0.5s;
-    z-index: 999;
+    /* z-index: 999; */
   }
   
   .form-open {
