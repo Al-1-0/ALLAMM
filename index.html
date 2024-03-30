@@ -100,32 +100,35 @@
 
     <!-- home section -->
     <section class="section gift-section-wrapper ">
-        <img src="header.png"/>
-                <h2 class="text-center">ARTIST: ALLAMM</h2>
+        <h2 class="text-center">ALLAMM <br>
+            <!-- music player -->
+            <div id="music-player">
 
-                <!-- music player -->
-                 <div id="music-player" style="display: none;">
-                    <audio id="audio-player" controls>
-                        <source src="https://github.com/Al-1-0/ALLAMM/raw/main/Leisure%20Centre.mp3" type="audio/mpeg">
-                        Your browser does not support the audio element.
-                    </audio>
-                    
-                    <div id="controls">
-                        <button id="play-btn">&#9658;</button>
-                        <button id="pause-btn">&#10074;&#10074;</button>
-                        <button id="stop-btn">&#9724;</button>
-                    </div>
+                <div id="controls" style="text-align: left;">
+                    <button id="play-btn">&#9658;</button><br>
+                    <button id="pause-btn">&#10074;&#10074;</button><br>
+                    <button id="stop-btn">&#9724;</button>
                 </div>
-                <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+                <audio id="audio-player" controls>
+                    <source src="https://github.com/Al-1-0/ALLAMM/raw/main/Leisure%20Centre.mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+        </h2>
+        <img src="header.png"/>
+
+                
     
                 <!-- links to spotify / apple music -->
     </section>
 
     <!-- booking section  -->
     <section id="contact-section" class="contact-section ">
-        
+        <h2 class="text-center">BOOKING / ENQUIRIES</h2>
         <div class="spin-card">
-            <h2 class="text-center">BOOKING / ENQUIRIES</h2>
+            
             <div class="front">
                 <img src="background_synth_001.png" alt="Background Image" class="clickable-image">
             </div>
@@ -196,8 +199,9 @@
 
     <!-- About Section -->
     <section id="intro-section" class="intro-section " style="">
+        <h2 class="text-center">ARTIST INFO</h2>
         <div class="spin-card">
-            <h2 class="text-center">ARTIST INFO</h2>
+            
             <div class="front">
                 <img src="EP_0001 INNER 2.png" class="clickable-image"/>
             </div>
@@ -232,22 +236,24 @@
 
     <!-- music section -->
     <section class="music-section-wrapper " id="musicSection">
+        <h2>MUSIC</h2>
         <div class="spin-card">
-            <h2>MUSIC</h2>
-            <div class="front">
+            
+            <div class="front" style="z-index: 2;">
                 <img src="2.png" class="clickable-image"/>
             </div>
-            <div class="back">
+            <div class="back" style="z-index: 0;">
                 <!-- links to spotify / apple music -->
                 <iframe id="spotify_frame" 
-                        style="border-radius:12px" 
-                        src="https://open.spotify.com/embed/artist/5pyS6EsqVKAaSmrkt5lefF?utm_source=generator" 
-                        frameBorder="0" 
-                        allowfullscreen="" 
-                        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
-                        loading="lazy">
-                </iframe>
+                style="z-index: 1; border-radius:12px" 
+                src="https://open.spotify.com/embed/artist/5pyS6EsqVKAaSmrkt5lefF?utm_source=generator" 
+                frameBorder="0" 
+                allowfullscreen="" 
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+                loading="lazy">
+            </iframe>
             </div>
+            
         </div>
         <script>
             $(document).ready(function() {
@@ -263,16 +269,17 @@
 
     <!-- gift section -->
     <section id="giftSection" class="">
+        <h2>DOWNLOADS</h2>
         <div class="spin-card">
-            <h2>DOWNLOADS</h2>
-            <div class="front">
+            
+            <div class="front" style="z-index: 2;">
                 <img src="EP_0001a INNER 1.png" class="clickable-image"/>
             </div>
-            <div class="back">
+            <div class="back" style="z-index: 0;">
                 <!-- == transparent -->
             </div>
         </div>
-        <div class="downloads-container">
+        <div class="downloads-container" style="z-index: 1;">
             <p>
                 <span>
                     LEISURE CENTRE <a class="download-link" href="https://github.com/Al-1-0/ALLAMM/raw/main/Leisure%20Centre.mp3" download><svg aria-hidden="true" focusable="false" role="img" class="octicon octicon-download" viewBox="0 0 16 16" width="16" height="16" fill="currentColor" style="display:inline-block;user-select:none;vertical-align:text-bottom;overflow:visible"><path d="M2.75 14A1.75 1.75 0 0 1 1 12.25v-2.5a.75.75 0 0 1 1.5 0v2.5c0 .138.112.25.25.25h10.5a.25.25 0 0 0 .25-.25v-2.5a.75.75 0 0 1 1.5 0v2.5A1.75 1.75 0 0 1 13.25 14Z"></path><path d="M7.25 7.689V2a.75.75 0 0 1 1.5 0v5.689l1.97-1.969a.749.749 0 1 1 1.06 1.06l-3.25 3.25a.749.749 0 0 1-1.06 0L4.22 6.78a.749.749 0 1 1 1.06-1.06l1.97 1.969Z"></path></svg></a>
