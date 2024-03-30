@@ -60,17 +60,17 @@ html {
 
 /* musiv playa */
 #music-player {
-    text-align: center;
-    margin-top: 50px;
+    text-align: left;
+    margin-top: 5px;
+    margin-left: 0px;
 }
 
 #controls button {
-    background-color: #fff;
+    background-color: transparent;
     border: none;
-    color: #333;
-    font-size: 24px;
+    color: var(--main-white);
+    font-size: 30px;
     cursor: pointer;
-    margin: 0 10px;
     transition: transform 0.2s;
 }
 
@@ -80,6 +80,8 @@ html {
 
 #audio-player  {
     opacity: 0;
+    width: 1px;
+    height: 1px;
 }
 
 /* spotify  */
@@ -220,24 +222,27 @@ p {
     justify-content: center;
     width: 100%;
     height: 100vh;
-    top: 10vh;
-    margin-bottom: 10vh;
+    /* margin-top: 10vh; */
+    margin-bottom: 30vh;
 }
 
 .gift-section-wrapper img {
-    position: absolute;
+    /* position: absolute; */
     top: 0;
     left: 0;
-    width: 60vw;
+    /* width: 60vw; */
     object-fit: cover; 
     z-index: 1;
+    width: -webkit-fill-available;
 }
 
 .gift-section-wrapper h2 {
     z-index: 2;
-    position: absolute;
+    position: fixed;
     top: 0;
-    right: 0;
+    /* right: 0; */
+    left: 0vw;
+
 }
 
 #giftSection {
@@ -247,17 +252,18 @@ p {
     justify-content: center;
     width: 100%;
     height: 100vh;
-    top: 10vh;
-    margin-bottom: 10vh;
+    margin-top: 10vh;
+    margin-bottom: 30vh;
 }
 
 #giftSection img {
-    position: absolute;
+    /* position: absolute; */
     top: 0;
     left: 0;
-    width: 60vw;
+    /* width: 60vw; */
     object-fit: cover; 
     z-index: 1;
+    width: -webkit-fill-available;
 }
 
 #giftSection h2 {
@@ -287,17 +293,18 @@ p {
     justify-content: center;
     width: 100%;
     height: 100vh;
-    top: 10vh;
-    margin-bottom: 10vh;
+    margin-top: 10vh;
+    margin-bottom: 30vh;
 }
 
 .intro-section img {
-    position: absolute;
+    /* position: absolute; */
     top: 0;
     left: 0;
-    width: 60vw;
+    /* width: 60vw; */
     object-fit: cover; 
     z-index: 1;
+    width: -webkit-fill-available;
 }
 
 .intro-section h2 {
@@ -316,8 +323,8 @@ p {
     justify-content: center;
     width: 100%;
     height: 100vh;
-    top: 10vh;
-    margin-bottom: 10vh;
+    margin-top: 10vh;
+    margin-bottom: 30vh;
 }
 
 .contact-section h2 {
@@ -335,12 +342,13 @@ p {
 }
 
 .contact-section img {
-    position: absolute;
+    /* position: absolute; */
     top: 0;
     left: 0;
-    width: 60vw;
+    /* width: 60vw; */
     object-fit: cover; 
     z-index: 1;
+    width: -webkit-fill-available;
 }
 
 
@@ -370,17 +378,18 @@ svg {
     justify-content: center;
     width: 100%;
     height: 100vh;
-    top: 10vh;
-    margin-bottom: 10vh;
+    margin-top: 10vh;
+    margin-bottom: 30vh;
 }
 
 .music-section-wrapper img {
-    position: absolute;
+    /* position: absolute; */
     top: 0;
     left: 0;
-    width: 60vw;
+    /* width: 60vw; */
     object-fit: cover; 
     z-index: 1;
+    width: -webkit-fill-available;
 }
 
 .music-section-wrapper h2 {
@@ -696,6 +705,55 @@ p {
 .form-section, .intro-section {
     height: 100vh;
 }
+
+.clickable-image {
+    cursor: pointer;
+  }
+  
+  .spin-card {
+    width: 100% !important;
+    height: 100% !important;
+    position: relative !important;
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
+  }
+  
+  .spin-card.flipped {
+    transform: rotateY(180deg);
+  }
+  
+  .front, .back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+  }
+  
+  .back {
+    transform: rotateY(180deg);
+    /* display: none; */
+  }
+  
+  .hidden {
+    display: none;
+  }
+
+  .form-container,  
+  .downloads-container {
+    position: relative;
+    top: -40vh;;
+    left: -140vw; /* Initially hide the form outside the viewport */
+    width: 60vw; /* Adjust form width as needed */
+    height: 100%;
+    background-color: transparent;
+    transition: left 0.5s;
+    z-index: 999;
+  }
+  
+  .form-open {
+    left: 0;
+  }
+
 .gift-section-wrapper img,
 .contact-section img,
 .intro-section img,
