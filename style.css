@@ -27,6 +27,10 @@
   box-sizing: inherit;
 }
 
+#spotify-frame #__next div {
+    background-color: var(--main-gray) !important;
+}
+
                                       /***** Body  / HTML ******/
 /* body {
   background: linear-gradient(180deg, #f0f0f0 0%, #939393 50%, #232528 70%);
@@ -208,7 +212,6 @@ p {
     height: 100%;
     background-color: transparent;
     transition: left 0.5s;
-    z-index: 999;
   }
   
   .form-open {
