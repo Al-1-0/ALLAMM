@@ -503,7 +503,7 @@ body input ~ nav {
 }
 body input ~ nav > ul {
     position: absolute;
-    top: 44%;
+    top: 50%;
     left: 0%;
 }
 body input ~ nav > ul > li {
