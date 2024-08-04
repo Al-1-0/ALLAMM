@@ -21,6 +21,18 @@
         crossorigin="anonymous">
     </script>
 
+    <!-- 1. jQuery CDN (Google) -->
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script> -->
+    
+    <!-- 2. jQuery CDN (jQuery's official CDN) -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    
+    <!-- 3. jsDelivr CDN -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script> -->
+    
+    <!-- 4. CDNJS -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script> -->
+
     <style>
 
         body {
@@ -84,45 +96,62 @@
 <nav>
     <ul>
         <li>
-            <a href="#contact-section"><strong>Book</strong></a>
+            <a href="#intro-section"><strong>Info</strong></a>
         </li>
         <li>
-            <a href="#intro-section"><strong>Info</strong></a>
+            <a href="#contact-section"><strong>Book</strong></a>
         </li>
         <li>
             <a href="#musicSection"><strong>Music</strong></a>
         </li>
         <li>
-            <a href="#giftSection"><strong>Gifts</strong></a>
+            <a href="#giftSection"><strong>Gift</strong></a>
         </li>
     </ul>
 </nav>
 
     <!-- home section -->
-    <!-- <section class="section gift-section-wrapper ">
-        <h2 class="text-center">ALLAMM <br>
-            music player
-            <div id="music-player" style="display: none;">
+    <section class="section gift-section-wrapper ">
+        <h2 class="text-center">ALLAMM </h2>
+    </section>
 
-                <div id="controls" style="text-align: left;">
-                    <button id="play-btn">&#9658;</button><br>
-                    <button id="pause-btn">&#10074;&#10074;</button><br>
-                    <button id="stop-btn">&#9724;</button>
-                </div>
-                <audio id="audio-player" controls>
-                    <source src="Leisure Centre.mp3" type="audio/mpeg">
-                    Your browser does not support the audio element.
-                </audio>
+    <!-- About Section -->
+    <section id="intro-section" class="intro-section " style="">
+        <h2 class="text-center">ARTIST INFO</h2>
+        <div class="spin-card">
+            
+            <div class="front" style="z-index: 2;">
+                <img src="1.png" class="clickable-image"/>
             </div>
-            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
-        </h2>
-        <img src="4.png"/> -->
-
-                
+            <div class="back" style="z-index: 0;">
+                <p><br>
+                    Allamm is a web developer, digital archivist, and musician from the dark, west end of Glasgow, Scotland. <br>
+                    
+                    Allamm has an MA in digital media and information studies and a MSc in mobile web development. Before this project, Allamm
+                    also contributed music for video art installations, developed archives for arts organisations, published digital e-learning
+                    materials, and played electric guitar in a rock band. <br>
     
-                <!-- links to spotify / apple music -->
-    <!-- </section> -->
+                    As a musician (electronic, techno, experimental, alt-disco), Allamm's music comprises of synthy, deep and
+                    expressive compositions aimed at the dancefloor and/or headphone enthusiasts. <br>
+    
+                    Next release 'Leisure Centre' is out on Oct 18th 2024. <br>
+
+                    (Site design / development by ALLAMM) <br>
+                </p>
+            </div>
+        </div>  
+        
+        <script>
+            $(document).ready(function() {
+                $('#intro-section .clickable-image').click(function() {
+                    var card = $(this).closest('#intro-section .spin-card');
+                    card.toggleClass('flipped');
+                    card.find('#intro-section .back').toggleClass('visible');
+                });
+            });
+        </script>
+
+    </section>
 
     <!-- booking section  -->
     <section id="contact-section" class="contact-section ">
@@ -195,45 +224,6 @@
             });
         </script>
         
-    </section>
-
-    <!-- About Section -->
-    <section id="intro-section" class="intro-section " style="">
-        <h2 class="text-center">ARTIST INFO</h2>
-        <div class="spin-card">
-            
-            <div class="front" style="z-index: 2;">
-                <img src="1.png" class="clickable-image"/>
-            </div>
-            <div class="back" style="z-index: 0;">
-                <p>
-                    About: Allamm is a web developer, digital archivist, and musician from Glasgow, Scotland, and has worked
-                    on countless sites in the digital giving sector including customisations for Alzheimers Research,
-                    G.O.S.H, Mental Health UK, Irish Cancer Society and many more. Once a 'scholar', Allamm has an MA in
-                    digital media and information studies and a MSc in mobile web development. Before this project, Allamm
-                    has contributed music for video art installations, developed archives for arts organisations, and played
-                    guitar in a rock band.
-    
-                    As a musician (electronic, techno, experimental, rock), Allamm's music comprises of synthy, deep and
-                    expressive techno compositions aimed to surprise and present the listener with personal experiences.
-    
-                    Next release 'Altruistica' is out on April 19th 2024.
-
-                    (Site design / development by ALLAMM)
-                </p>
-            </div>
-        </div>  
-        
-        <script>
-            $(document).ready(function() {
-                $('#intro-section .clickable-image').click(function() {
-                    var card = $(this).closest('#intro-section .spin-card');
-                    card.toggleClass('flipped');
-                    card.find('#intro-section .back').toggleClass('visible');
-                });
-            });
-        </script>
-
     </section>
 
     <!-- music section -->
@@ -400,7 +390,7 @@
         });
     </script>
 
-
+</body>
 
 
 
